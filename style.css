@@ -1,0 +1,377 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&family=Ubuntu:wght@400;500;700&display=swap');
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    text-decoration: none;
+}
+
+.max-width{
+    max-width: 1300px;
+    padding: 0 80px;
+    margin: auto;
+}
+/*navbar styling */
+
+.navbar{
+    position:fixed;
+    width: 100%;
+    z-index: 999;
+    padding: 15px 0px;
+    /* background: #f696a9; */
+    font-family: 'Ubuntu', sans-serif;
+    transition: all 0.5s ease;
+}
+.navbar.sticky{
+    background:#f696a9;
+    padding: 15px 0px;
+}
+.navbar .max-width{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+.navbar .logo a{
+    color: white;
+    font-size: 35px;
+    font-weight: 600;
+}
+.navbar .logo a span{
+    color: #f696a9;
+}
+.navbar.sticky .logo a span{
+    color: #FFF;
+    transition: 0.5s ease;
+}
+.navbar .menu li{
+    list-style: none;
+    display: inline-block;
+}
+.navbar .menu li a{
+    color: #FFF;
+    font-size: 25px;
+    font-weight: 500;
+    margin-left: 25px;
+    transition: color 0.5s ease ;
+
+}
+.navbar .menu li a:hover{
+    color: #f696a9;
+}
+.navbar.sticky .menu li a:hover{
+    color:#13668f
+}
+
+/* menu btn styling */
+.menu-btn{
+    color: #fff;
+    font-size: 23px;
+    cursor: pointer;
+    display: none;
+}
+
+/* home page styling */
+.home{
+    display: flex;
+    background: url("images/vic.png");
+    height: 100vh;
+    background-size: cover;
+    background-attachment: fixed;
+    color: #FFF;
+    min-height: 500px;
+    font-family: 'Ubuntu', sans-serif;
+}
+.home .max-width{
+    margin: auto 0 auto 40px;
+}
+.home .home-content .text-1{
+    font-size: 27px;
+}
+.home .home-content .text-2{
+    font-size: 75px;
+    font-weight: 600;
+    margin-left: -3px;
+}
+.home .home-content .text-3{
+    font-size: 40px;
+    margin: 5px 0;
+}
+.home .home-content .text-3 span{
+    color: #f696a9;
+    font-weight: 600;
+}
+.home .home-content a{
+    display: inline-block;
+    background: #f696a9;
+    color:#FFF;
+    font-size: 25px;
+    padding: 12px 36px;
+    margin-top: 20px;
+    border-radius: 8px;
+    border: 2px solid #f37891;
+    transition: all 0.3s ease;
+}
+.home .home-content a:hover{
+    color: #FFF;
+    background: none;
+}
+/* all similar content styling code */
+section{
+    padding: 100px 0;
+}
+.about, .services, .skills{
+    font-family: 'Poppins', sans-serif;
+}
+.about .about-content, .services .serv-content, 
+.skills .skills-content{
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: space-between;
+}
+section .title{
+    position: relative;
+    text-align: center;
+    font-size: 40px;
+    font-weight: 500;
+    margin-bottom: 60px;
+    padding-bottom: 20px;
+    font-family: 'Ubuntu', sans-serif;
+}
+section .title::before{
+    content:"";
+    position: absolute;
+    bottom: 0px;
+    width: 180px;
+    left: 50%;
+    height: 3px;
+    background:#ffffff;
+    transform: translateX(-50%); 
+}
+section .title::after{
+    position: absolute;
+    bottom: -10px;
+    left: 50%;
+    font-size: 20px;
+    color: #f696a9;
+    padding: 5px;
+    background: #13668f;
+    transform: translateX(-50%); 
+}
+
+/* about me section styling */
+.about{
+    background: #13668f;
+    color:#FFF
+}
+.about .title::after{
+    content:"who i am";
+}
+.about .about-content .left{
+    width: 45%;
+}
+.about .about-content .left img{
+    height: 400px;
+    width: 400px;
+    object-fit: cover;
+    border-radius: 200px;
+}
+.about .about-content .right{
+    width: 55%;
+}
+.about .about-content .right .text{
+   font-size: 25px;
+   font-weight: 600;
+   margin-bottom: 10px;
+   color: #FFF;
+}
+.about .about-content .right .text span{
+    color: #f696a9;
+} 
+.about .about-content .right p{
+    text-align: justify;
+    color: #FFF;
+}
+.about .about-content .right a{
+    display: inline-block;
+    background: #f696a9;
+    color:#FFF;
+    font-size: 20px;
+    padding: 1px 30px;
+    margin-top: 20px;
+    border-radius: 8px;
+    border: 2px solid #f37891;
+    transition: all 0.3s ease;
+}
+.about .about-content .right a:hover{
+    color: #f37891;
+    background: none;
+    transition: all 0.5s ease;
+}
+/* services section styling */
+.services{
+    background: #277ca7;
+    color: #FFF;
+}
+.services .title::before{
+    background: #ffffff;
+}
+.services .title::after{
+    background: #277ca7;
+    content: "what i provide";
+}
+.services .serv-content .card{
+    width: calc(33% - 20px);
+    background: #13668f;
+    text-align: center;
+    display:inline-block;
+    border-radius: 6px;
+    padding: 20px 25px;
+    cursor: pointer;
+}
+.services .serv-content :hover{
+    background: #f696a9;
+}
+.services .serv-content .card .box{
+    transition: all 0.3s ease;
+}
+.services .serv-content .card:hover .box{
+    transform: scale(1.05);
+}
+
+.services .serv-content .card i{
+    font-size: 50px;
+    padding: 10px 10px;
+    color: #f696a9;
+}
+.services .serv-content .card:hover .box i{
+    transition: all 0.3s ease;
+    color:#FFF
+}
+
+/* Skills section styling */
+.skills .title::after{
+    content: "what i know";
+}
+.skills{
+    background: #13668f;
+    color: #FFF;
+}
+
+.skills .skills-content .column-left{
+    width: calc(50% - 30px);
+}
+/* responsive media query start */
+@media (max-width: 1300px){
+    .home .max-width{
+        margin-left: 0px;
+    }
+}
+@media (max-width: 1104px){
+    .about .about-content .left img{
+        height: 350px;
+        width: 350px;
+    }
+}
+@media (max-width: 991px){
+    .home .max-width{
+        padding: 0 50px;
+    }
+    .about .about-content .left img{
+        height: 300px;
+        width: 300px;
+    }
+}
+
+@media (max-width: 947px){
+    .menu-btn{
+        display: block;
+        z-index: 999;
+    }
+    .max-width{ 
+    padding: 0 50px;
+    }
+    .menu-btn i.active:before{
+        content: "\f00d";
+    }
+    .navbar .menu{
+        position: fixed;
+        height: 100vh;
+        width: 100%;
+        left: -100%;
+        top: 0;
+        background: #111;
+        text-align: center;
+        padding-top: 80px;
+        transition: 0.3s all ease;
+    }
+    .navbar .menu.active{
+        left: 0;
+    }
+    .navbar .menu li{
+        display: block;
+    }
+    .navbar .menu li a{
+        display: inline-block;
+        margin: 20px 0;
+        font-size: 25px;
+
+    }
+    .home .home-content .text-2{
+        font-size: 70px;
+    }
+    .home .home-content .text-3{
+        font-size: 35px;
+    }
+    .home .home-content a{
+        font-size: 23px;
+        padding: 10px 30px;
+    }
+    .about .about-content .column{
+        width: 100%;
+    }
+    .services .serv-content .card{
+        width: calc(50% - 10px);
+        margin-bottom: 20px;
+    }
+    .max-width{
+        max-width: 800px;
+    }
+    .about .about-content .left{
+        display: flex;
+        justify-content: center;
+        margin: 0 auto 60px;
+    }
+    .about .about-content .right{
+      flex: 100%;  
+    }
+}
+
+@media (max-width: 690px){
+    .home .max-width{
+        padding: 0 23px;
+    }
+    .home .home-content .text-2{
+        font-size: 60px;
+    }
+    .home .home-content .text-3{
+        font-size: 32px;
+    }
+    .home .home-content a{
+        font-size: 23px;
+        padding: 8px 20px;
+    }
+    .services .serv-content .card{
+        width: 100%;
+
+    }
+}
+@media (max-width: 500px){
+    .home .home-content .text-2{
+        font-size: 50px;
+    }
+    .home .home-content .text-3{
+        font-size: 27px;
+    }
+}
+
