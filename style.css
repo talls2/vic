@@ -265,6 +265,7 @@ section .title::after{
     border-radius: 6px;
     padding: 20px 25px;
     cursor: pointer;
+    margin: 4px;
 }
 .skills .skills-content :hover{
     background: #f696a9;
@@ -276,10 +277,11 @@ section .title::after{
     transform: scale(1.05);
 }
 
-.skills .skills-content .card i{
+.skills .skills-content .card img{
     font-size: 50px;
     padding: 10px 10px;
     color: #f696a9;
+    width: 25%;
 }
 .image{
     width: 50px;
