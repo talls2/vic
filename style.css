@@ -257,9 +257,36 @@ section .title::after{
     background: #13668f;
     color: #FFF;
 }
+.skills .skills-content .card{
+    width: calc(33% - 20px);
+    background: #277ca7;
+    text-align: center;
+    display:inline-block;
+    border-radius: 6px;
+    padding: 20px 25px;
+    cursor: pointer;
+}
+.skills .skills-content :hover{
+    background: #f696a9;
+}
+.skills .skills-content .card .box{
+    transition: all 0.3s ease;
+}
+.skills .skills-content .card:hover .box{
+    transform: scale(1.05);
+}
 
-.skills .skills-content .column-left{
-    width: calc(50% - 30px);
+.skills .skills-content .card i{
+    font-size: 50px;
+    padding: 10px 10px;
+    color: #f696a9;
+}
+.image{
+    width: 50px;
+}
+.skills .skills-content .card:hover .box i{
+    transition: all 0.3s ease;
+    color:#FFF
 }
 /* responsive media query start */
 @media (max-width: 1300px){
