@@ -5,6 +5,9 @@
     box-sizing: border-box;
     text-decoration: none;
 }
+html{
+    scroll-behavior: smooth;
+}
 
 .max-width{
     max-width: 1300px;
@@ -350,7 +353,18 @@ section .title::after{
 .contact .right form .name{
     margin-right:10px
 }
-.contact .right form .field input,.contact .right form .textarea textarea{
+.contact .right form .field input{
+    height:100%;
+    width:100%;
+    border:1px solid lightgrey;
+    border-radius:6px;
+    outline:none;
+    padding:0 15px;
+    font-size:17px;
+    font-family: 'Poppins',sans-serif;
+    transition:all .3s ease;
+}
+.contact .right form .textarea textarea{
     height:100%;
     width:100%;
     border:1px solid lightgrey;
@@ -476,6 +490,14 @@ footer span a:hover{
         width: calc(50% - 10px);
         margin-bottom: 20px;
     }
+    .contact .contact-content .card{
+        width: calc(50% - 10px);
+        margin-bottom: 20px;
+    }
+    .skills .skills-content .card{
+        width: calc(50% - 10px);
+        margin-bottom: 20px;
+    }
     .max-width{
         max-width: 800px;
     }
@@ -505,7 +527,9 @@ footer span a:hover{
     }
     .services .serv-content .card{
         width: 100%;
-
+    }
+    .skills .skills-content .card{
+        width: 100%
     }
 }
 @media (max-width: 500px){
