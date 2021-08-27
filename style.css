@@ -231,6 +231,8 @@ section .title::after{
     border-radius: 6px;
     padding: 20px 25px;
     cursor: pointer;
+    box-shadow: 0 10px 20px rgba(0,0,0,0.19), 0 6px 6px rgba(246, 150, 169, 0.25);
+
 }
 .services .serv-content :hover{
     background: #f696a9;
@@ -269,6 +271,7 @@ section .title::after{
     padding: 20px 25px;
     cursor: pointer;
     margin: 4px;
+    box-shadow: 0 10px 20px rgba(0,0,0,0.19), 0 6px 6px rgba(246, 150, 169, 0.25);
 }
 .skills .skills-content :hover{
     background: #f696a9;
